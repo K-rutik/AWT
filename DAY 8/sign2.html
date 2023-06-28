@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 40px;
+            margin: 0;
+            display: inline-block;
+            border: 1px solid saddlebrown;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: blue;
+            color: whitesmoke;
+            padding: 14px 20px;
+            margin: 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .container {
+            padding: 80px;
+        }
+        .fontuser,
+        .fontpassword {
+            position: relative;
+        }
+        .fontuser i,
+        .fontpassword i {
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fontuser">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="uname" required>
+            <i class="fa fa-user fa-lg"></i>
+        </div>
+
+        <div class="fontpassword">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" required>
+            <i class="fa fa-key fa-lg"></i>
+        </div>
+        <button type="submit">Login</button>
+        <label><input type="checkbox" checked="checked"> Remember me</label>
+    </div>
+</body>
+</html>
