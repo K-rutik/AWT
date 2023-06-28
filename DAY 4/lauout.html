@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>4x4 Grid Layout with Gradient Background</title>
+  <style>
+    * {
+        box-shadow: #e0ffff;
+        box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .content {
+      padding: 20px;
+      background-image: linear-gradient(to bottom right, #e0ffff, #363737);
+      color: #fff;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Welcome to My layout</h1>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <h2>Book 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 2</h2>
+        <p>Donec non metus vel felis facilisis commodo.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 3</h2>
+        <p>Nulla faucibus metus in sem tincidunt.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 4</h2>
+        <p>Ut fringilla lacus tincidunt.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <h2>Book 5</h2>
+        <p>Phasellus volutpat neque nec turpis tristique.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 6</h2>
+        <p>In sagittis arcu vehicula.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 7</h2>
+        <p>Duis tristique est non lectus hendrerit, ac fermentum magna cursus.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 8</h2>
+        <p>Curabitur consectetur odio eget nunc efficitur, eget iaculis lectus fermentum.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <h2>Book 9</h2>
+        <p>Aliquam vitae neque vitae turpis placerat tristique.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 10</h2>
+        <p>Quisque non neque at justo commodo interdum.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 11</h2>
+        <p>In in felis elit.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 12</h2>
+        <p>Mauris ut fringilla neque.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <h2>Book 13</h2>
+        <p>Praesent nec dui suscipit, pulvinar elit sed.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 14</h2>
+        <p>Posuere quam.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 15</h2>
+        <p>Vestibulum nec neque varius, aliquet velit ut, feugiat risus.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <h2>Book 16</h2>
+        <p>Proin tincidunt vehicula arcu a feugiat.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2023 Library System. All rights reserved. <h2>Contact Information</h2>
+        <p>Email: 2101031000229@silveroakuni.ac.in</p>
+        <p>Phone: +91 88496074646</p>
+        <p>Address: Gota, Ahmedabad</p></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>Demo Layout 3</title>
+	
+	<style type="text/css">
+		* {
+			font-size: 22px;
+			font-weight: bold;	
+		}
+		
+		#R1 {
+			background-image: linear-gradient(to bottom right, #e0ffff, #52ca23);
+			height: 50px;
+			padding-top: 20px;
+			width: 98%;
+			padding-left: 2%;
+			margin-bottom: 10px;
+		}
+		
+		#R2 {
+			height: 600px;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		
+		#R2C1,
+		#R2C2 {
+			float: left;
+			height: 600px;
+		}
+		
+		#R2C1 {
+			width: 30%;
+		}
+		
+		#R2C2 {
+			width: 70%;
+		}
+		
+		#R2C2R1 {
+			height: 100px;
+			padding-top: 90px;
+			margin-bottom: 10px;
+			background-image: linear-gradient(to bottom right, #e0ffff, #363737);
+			text-align: center;
+		}
+		
+		#R2C2R2 {
+			height: 300px;
+			padding-top: 100px;
+            background-image: linear-gradient(to bottom right, #e0ffff, #649b9b);
+			text-align: center;
+		}
+		
+		 #R3 {
+			height: 33px;
+			width: 100%;
+			padding-top: 5px;
+			text-align: center;
+            background-image: linear-gradient(to bottom right, #e0ffff, #0986b8);
+		}
+		
+		#logo-image {
+			max-height: 100%;
+			max-width: 100%;
+		}
+		
+		#R2C1 ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		#R2C1 li {
+			margin-right: 5px;
+		}
+		
+		#R2C1 li:last-child {
+			margin-right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div id="R1">
+			<img id="logo-image" src="images-removebg-preview.png" alt="Logo">
+		</div>
+		<div id="R2">
+			<div id="R2C1">
+				<ul>
+					<li><a href="library.html">Home</a></li>
+					<li><a href="library2.html">About</a></li>
+					<li><a href="layout1.html">Services</a></li>
+					<li><a href="book1.html">Contact</a></li>
+				</ul>
+			</div>
+			<div id="R2C2">
+				<div id="R2C2R1">
+					Header / Banner
+					<br>
+					Welcome to our website!
+				</div>
+				<div id="R2C2R2">
+					Body Area
+					<br>
+					Here, you can find all the information you need.
+				</div>
+			</div>
+		</div>
+		<div id="R3">
+			Footer
+		</div>
+	</div>
+</body>
+</html>
