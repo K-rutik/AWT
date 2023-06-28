@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>The JavaScript loop method</h2>
+    <p id="demo"></p>
+    
+    <script>
+       let text = "";
+       let i = 0;
+       while (i < 10) {
+        text += "<br>" + i;
+        i++;
+       }
+       document.getElementById('demo').innerHTML = text;
+    </script>
+    <p id="cars"></p>
+    <script>
+        const car = ['Bugatti Veyron', 'Koenigsegg Jesko', 'McLaren P1', 'Ferrari LaFerrari', 'Lamborghini Aventador SVJ','Toyota SUPRA' ];
+        let j = 0;
+        let text2 = "";
+        while(car[j]){
+            text2 += car[j] + '<br>';
+            j++;
+        }
+        document.getElementById('cars').innerHTML = text2;
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
