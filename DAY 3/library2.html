@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      background-image: url("pexels-ivo-rainha-1261180.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .footer {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: x-large;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.483);
+      padding: 10px;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      background-color: rgba(0, 0, 0, 0.483);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: xx-large;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 5px;
+      margin: auto;
+    }
+
+    table {
+      color: #ffffff;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: rgba(109, 107, 107, 0.5);
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: larger;
+      color: rgb(0, 237, 250);
+    }
+
+    tr {
+      background-color: rgba(0, 0, 0, 0.483);
+    }
+
+    
+    .footer {
+      background-color: rgba(0, 0, 0, 0.483);
+      padding: 10px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .search-container input[type=text] {
+      padding: 8px;
+      width: 50%;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .search-container button {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .book-details {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      margin-top: 10px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .book-details.active {
+      display: block;
+    }
+
+    .book-details h3 {
+      margin-top: 0;
+    }
+    
+    /* Added style for scroll bar */
+    #book-table {
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+  <h1>Library System</h1>
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search by title or author...">
+    <button onclick="searchBooks()">Search</button>
+  </div>
+
+  <table id="book-table">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Genre</th>
+      <th>Publication Year</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><a href="book1.html">H.C.VERMA</H></a></td>
+      <td>H.C.VERMA</td>
+      <td>500</td>
+      <td>Physics</td>
+      <td>1992</td>
+      <td>A comprehensive book on physics for students preparing for competitive examinations.</td>
+    </tr>
+    <tr>
+      <td>RICH DAD POOR DAD</td>
+      <td>Robert T. Kiyosaki</td>
+      <td>1500</td>
+      <td>Personal Finance</td>
+      <td>1997</td>
+      <td>A bestselling book that challenges conventional wisdom about money and financial independence.</td>
+    </tr>
+    <tr>
+      <td>The Great Gatsby</td>
+      <td>F. Scott Fitzgerald</td>
+      <td>700</td>
+      <td>Classic</td>
+      <td>1925</td>
+      <td>A classic novel depicting the glitz and glamour of the Jazz Age and the American Dream.</td>
+    </tr>
+    <tr>
+      <td>A Fine Balance</td>
+      <td>Rohinton Mistry</td>
+      <td>1100</td>
+      <td>Fiction</td>
+      <td>1995</td>
+      <td>An epic tale of four characters set in 1970s India, exploring themes of caste, politics, and resilience.</td>
+    </tr>
+    <tr>
+      <td>The Palace of Illusions</td>
+      <td>Chitra Banerjee Divakaruni</td>
+      <td>1300</td>
+      <td>Mythology</td>
+      <td>2008</td>
+      <td>A reimagining of the Mahabharata from the perspective of Draupadi, the central female character.</td>
+    </tr>
+    <!-- Additional books -->
+    <tr>
+      <td>To Kill a Mockingbird</td>
+      <td>Harper Lee</td>
+      <td>800</td>
+      <td>Classic</td>
+      <td>1960</td>
+      <td>A powerful story about racial injustice and moral growth set in the Deep South during the 1930s.</td>
+    </tr>
+    <tr>
+      <td>1984</td>
+      <td>George Orwell</td>
+      <td>900</td>
+      <td>Dystopian</td>
+      <td>1949</td>
+      <td>A dystopian novel depicting a totalitarian regime where individualism is suppressed.</td>
+    </tr>
+    <tr>
+      <td>Pride and Prejudice</td>
+      <td>Jane Austen</td>
+      <td>600</td>
+      <td>Classic</td>
+      <td>1813</td>
+      <td>A classic romantic novel exploring themes of love, class, and societal expectations.</td>
+    </tr>
+    <tr>
+      <td>The Catcher in the Rye</td>
+      <td>J.D. Salinger</td>
+      <td>750</td>
+      <td>Coming-of-Age</td>
+      <td>1951</td>
+      <td>A coming-of-age novel narrated by a teenager struggling with identity, adulthood, and societal norms.</td>
+    </tr>
+    <tr>
+      <td>The Hobbit</td>
+      <td>J.R.R. Tolkien</td>
+      <td>1200</td>
+      <td>Fantasy</td>
+      <td>1937</td>
+      <td>An adventure novel set in Tolkien's fictional Middle-earth, featuring a hobbit on a quest.</td>
+    </tr>
+  </table>
+
+  <div class="book-details" id="book-details">
+    <h3 id="book-title"></h3>
+    <p id="book-author"></p>
+    <p id="book-price"></p>
+    <p id="book-genre"></p>
+    <p id="book-year"></p>
+    <p id="book-description"></p>
+  </div>
+  
+  <div class="footer">
+    <p>&copy; 2023 Library System. All rights reserved. <h2>Contact Information</h2>
+        <p>Email: 2101031000229@silveroakuni.ac.in</p>
+        <p>Phone: +91 88496074646</p>
+        <p>Address: Gota, Ahmedabad</p></p>
+  </div>
+
+  
+
+  <script>
+    function searchBooks() {
+      var input = document.getElementById("search-input").value.toLowerCase();
+      var table = document.getElementById("book-table");
+      var rows = table.getElementsByTagName("tr");
+
+      for (var i = 0; i < rows.length; i++) {
+        var title = rows[i].getElementsByTagName("td")[0].textContent.toLowerCase();
+        var author = rows[i].getElementsByTagName("td")[1].textContent.toLowerCase();
+
+        if (title.includes(input) || author.includes(input)) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+
+    function showBookDetails(row) {
+  var bookTitle = row.getElementsByTagName("td")[0].textContent;
+  var bookAuthor = row.getElementsByTagName("td")[1].textContent;
+  var bookPrice = row.getElementsByTagName("td")[2].textContent;
+  var bookGenre = row.getElementsByTagName("td")[3].textContent;
+  var bookYear = row.getElementsByTagName("td")[4].textContent;
+  var bookDescription = row.getElementsByTagName("td")[5].textContent;
+
+  // Convert price from dollars to Indian rupees
+  var bookPriceInRupees = parseFloat(bookPrice) * 74.5; // Assuming 1 dollar = 74.5 Indian rupees
+
+  document.getElementById("book-title").textContent = bookTitle;
+  document.getElementById("book-author").textContent = "Author: " + bookAuthor;
+  document.getElementById("book-price").textContent = "Price: ₹" + bookPriceInRupees.toFixed(2); // Display price in Indian rupees
+  document.getElementById("book-genre").textContent = "Genre: " + bookGenre;
+  document.getElementById("book-year").textContent = "Publication Year: " + bookYear;
+  document.getElementById("book-description").textContent = "Description: " + bookDescription;
+
+  var bookDetails = document.getElementById("book-details");
+  bookDetails.classList.add("active");
+}
+
+
+    var bookRows = document.querySelectorAll("#book-table tr");
+    for (var i = 1; i < bookRows.length; i++) {
+      bookRows[i].addEventListener("click", function () {
+        showBookDetails(this);
+      });
+    }
+  </script>
+</body>
+</html>

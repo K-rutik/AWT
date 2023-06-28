@@ -1,0 +1,57 @@
+.blue-heading {
+    color: blue;
+  }
+  
+  .centered-text {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .yellow-box {
+    background-color: yellow ;
+    padding: 10px;
+  }
+  
+  .bold-text {
+    font-weight: bold;
+    font-feature-settings: "c2sc";
+    flex-wrap: wrap-reverse;
+  }
+  #first-div {
+    background-color: rgb(0, 63, 63) ;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  #second-div {
+    background-color: cyan ;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  #third-div {
+    background-color: cyan ;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Additional CSS features */
+  
+  .blue-heading h1 {
+    text-decoration: underline;
+  }
+  
+  .centered-text p:first-of-type {
+    color: rgb(0, 255, 51);
+  }
+  
+  .yellow-box p.bold-text {
+    font-style: italic;
+  }
+  
+  #first-div h2 {
+    margin-bottom: 10px;
+  }
+  

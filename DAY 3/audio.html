@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio and Video Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ff0000, #0000ff);
+        }
+        
+        h1, h2 {
+            color: #ffffff;
+        }
+        
+        audio, video {
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio and Video Example</h1>
+        
+        <h2>Audio Element</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video Element</h2>
+        <video src="video.mp4" controls></video>
+    </div>
+</body>
+</html>
