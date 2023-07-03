@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #panel{
+            padding: 50px;
+            display: none;
+            background-color: blanchedalmond;
+            text-align: center;
+        }
+        #flip{
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(31, 222, 222);
+            border: solid 1px grey;
+        }
+    </style>
+    <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+          });
+        });
+        </script>
+</head>
+
+<body>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello Bachoooooooooooooooooooooooooooooooooooo!</div>
+</body>
+
+</html>
